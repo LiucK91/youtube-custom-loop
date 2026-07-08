@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Custom Loop",
+  "version": "1.0.0",
+  "description": "Allows looping of multiple sequential video segments with automatic timestamp capture.",
+  "permissions": ["activeTab"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "multiloop-pro@estensioni-personali.it",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      },
+      "strict_min_version": "140.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
