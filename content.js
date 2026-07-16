@@ -56,7 +56,7 @@ function injectLoopButton() {
     transition: background 0.2s;
   `;
   
-  // Assegnazione HTML statica, senza variabili (sicura per il linter)
+
   loopBtn.innerHTML = `
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
@@ -94,8 +94,7 @@ function addSegmentRow(startVal = "", endVal = "") {
     margin-bottom: 8px;
   `;
 
-  // Assegnazione HTML statica per superare i controlli di sicurezza di Mozilla.
-  // Nessuna variabile inserita tramite interpolazione.
+
   row.innerHTML = `
     <div style="display:flex; align-items:center; background:#121212; border:1px solid #444; border-radius:6px; padding:2px 4px; flex:1;">
       <input type="text" class="yt-start-input" placeholder="Start" style="width:100%; background:transparent; border:none; color:#fff; font-size:13px; outline:none; padding:4px;">
@@ -109,7 +108,7 @@ function addSegmentRow(startVal = "", endVal = "") {
     <button class="yt-del-seg-btn" style="background:transparent; border:none; color:#ff4f4f; cursor:pointer; font-size:18px; padding:0 4px; line-height:1;">&times;</button>
   `;
 
-  // I valori vengono assegnati programmaticamente in un secondo momento (sicuro)
+
   row.querySelector('.yt-start-input').value = startVal;
   row.querySelector('.yt-end-input').value = endVal;
 
